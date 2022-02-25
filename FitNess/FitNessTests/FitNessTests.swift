@@ -8,6 +8,8 @@
 
 import XCTest
 
+import FitNess
+
 class FitNessTests: XCTestCase {
   
   override func setUpWithError() throws {
@@ -31,6 +33,15 @@ class FitNessTests: XCTestCase {
     measure {
       // Put the code you want to measure the time of here.
     }
+  }
+  
+  func test_AppModel_whenInitialized_isNotStartedAppState() {
+    // when
+    let sut = AppModel()
+    let state = sut.appState
+
+    // then
+    XCTAssertEqual(state, AppState.notStarted)
   }
   
 }
