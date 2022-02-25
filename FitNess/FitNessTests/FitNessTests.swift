@@ -44,4 +44,16 @@ class FitNessTests: XCTestCase {
     XCTAssertEqual(state, AppState.notStarted)
   }
   
+  func test_AppModel_whenStartButtonPressed_isInProgressAppState() {
+    // given
+    let sut = AppModel()
+
+    // when
+    sut.start()
+    
+    // then
+    let observedState = sut.appState
+    XCTAssertEqual(observedState, AppState.inProgress)
+  }
+  
 }
