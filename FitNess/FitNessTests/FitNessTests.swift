@@ -12,6 +12,8 @@ import FitNess
 
 class FitNessTests: XCTestCase {
   
+  var sut: AppModel!
+  
   override func setUpWithError() throws {
     // Put setup code here. This method is called before the invocation of each test method in the class.
   }
@@ -35,9 +37,18 @@ class FitNessTests: XCTestCase {
     }
   }
   
+  override func setUp() {
+    super.setUp()
+    sut = AppModel()
+  }
+  
+  override func tearDown() {
+    sut = nil
+    super.tearDown()
+  }
+  
   func test_AppModel_whenInitialized_isNotStartedAppState() {
     // when
-    let sut = AppModel()
     let state = sut.appState
 
     // then
@@ -45,9 +56,6 @@ class FitNessTests: XCTestCase {
   }
   
   func test_AppModel_whenStartButtonPressed_isInProgressAppState() {
-    // given
-    let sut = AppModel()
-
     // when
     sut.start()
     
