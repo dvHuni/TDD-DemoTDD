@@ -1,6 +1,6 @@
 //
-//  FitNessTests.swift
-//  FitNessTests
+//  AppModelTests.swift
+//  AppModelTests
 //
 //  Created by AhnSangHoon on 2022/02/25.
 //  Copyright © 2022 Razeware. All rights reserved.
@@ -10,7 +10,7 @@ import XCTest
 
 import FitNess
 
-class FitNessTests: XCTestCase {
+class AppModelTests: XCTestCase {
   
   var sut: AppModel!
   
