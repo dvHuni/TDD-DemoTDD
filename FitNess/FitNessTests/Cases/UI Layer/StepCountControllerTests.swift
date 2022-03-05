@@ -46,4 +46,9 @@ class StepCountControllerTests: XCTestCase {
     super.tearDown()
   }
   
+  func testController_whenStartTapped_isInProgress() {
+    sut.startStopPause(nil)
+    let state = AppModel.instance.appState
+    XCTAssertEqual(state, AppState.inProgress)
+  }
 }
