@@ -35,4 +35,15 @@ class StepCountControllerTests: XCTestCase {
       // Put the code you want to measure the time of here.
     }
   }
+  
+  override func setUp() {
+    super.setUp()
+    sut = StepCountController()
+  }
+  
+  override func tearDown() {
+    sut = nil
+    super.tearDown()
+  }
+  
 }
