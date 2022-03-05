@@ -68,5 +68,10 @@ class StepCountController: UIViewController {
 
   @IBAction func startStopPause(_ sender: Any?) {
     AppModel.instance.start()
+    
+    startButton.setTitle(
+      AppModel.instance.appState.nextStateButtonLabel,
+      for: .normal
+    )
   }
 }
