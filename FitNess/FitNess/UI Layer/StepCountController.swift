@@ -64,18 +64,16 @@ class StepCountController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    startButton.setTitle(
-      AppState.notStarted.nextStateButtonLabel,
-      for: .normal
-    )
+    updateButton()
   }
 
   @IBAction func startStopPause(_ sender: Any?) {
     AppModel.instance.start()
-    
-    startButton.setTitle(
-      AppModel.instance.appState.nextStateButtonLabel,
-      for: .normal
-    )
+    updateButton()
+  }
+  
+  private func updateButton() {
+    let title = AppModel.instance.appState.nextStateButtonLabel
+    startButton.setTitle(title, for: .normal)
   }
 }
