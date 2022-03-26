@@ -30,4 +30,13 @@ class DataModelTests: XCTestCase {
     // then
     XCTAssertFalse(sut.isReachedGoal, "isReachedGoal should be false when the model is created")
   }
+  
+  func test_whenStepReacedGoal_isReachedGoalIsTrue() {
+    // given
+    sut.goal = 1000
+    // when
+    sut.step = 1000
+    // then
+    XCTAssertTrue(sut.isReachedGoal)
+  }
 }
