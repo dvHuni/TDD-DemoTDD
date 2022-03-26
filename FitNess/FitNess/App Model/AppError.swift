@@ -32,6 +32,6 @@
 
 import Foundation
 
-public enum AppState {
-  case notStarted, inProgress, paused, completed, caught
+enum AppError: Error {
+  case goalNotSet
 }
