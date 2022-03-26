@@ -17,6 +17,7 @@
 		772A707427CDC25400E55B6B /* StepCountControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A707327CDC25400E55B6B /* StepCountControllerTests.swift */; };
 		773E99DB27C90F1400131CD8 /* AppModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773E99DA27C90F1400131CD8 /* AppModelTests.swift */; };
 		779AE31E27EEF438006E5268 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779AE31D27EEF438006E5268 /* DataModelTests.swift */; };
+		779AE32127EEF5A8006E5268 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779AE32027EEF5A8006E5268 /* DataModel.swift */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,7 @@
 		773E99D827C90F1400131CD8 /* FitNessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitNessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		773E99DA27C90F1400131CD8 /* AppModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModelTests.swift; sourceTree = "<group>"; };
 		779AE31D27EEF438006E5268 /* DataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelTests.swift; sourceTree = "<group>"; };
+		779AE32027EEF5A8006E5268 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* FitNess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitNess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2A5F20F1F4A9144005CD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,6 +147,14 @@
 			path = "Data Model";
 			sourceTree = "<group>";
 		};
+		779AE31F27EEF599006E5268 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				779AE32027EEF5A8006E5268 /* DataModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		D2A5F1F71F4A9143005CD714 = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 				D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */,
 				0A311FFC219102ED00AE4720 /* App Layer */,
 				0A9EB50C21C072F50062B66E /* App Model */,
+				779AE31F27EEF599006E5268 /* DataModel */,
 				0AA5E730219B997D00B7A0D0 /* UI Layer */,
 				0A2B1016219B0B8000848D29 /* Assets & Info */,
 				D2A5F20F1F4A9144005CD714 /* Info.plist */,
@@ -291,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779AE32127EEF5A8006E5268 /* DataModel.swift in Sources */,
 				0A1BDA14218E542100804262 /* RootViewController.swift in Sources */,
 				0A1BDA15218E542100804262 /* StepCountController.swift in Sources */,
 				0AA5E735219B9B4600B7A0D0 /* AppState.swift in Sources */,
