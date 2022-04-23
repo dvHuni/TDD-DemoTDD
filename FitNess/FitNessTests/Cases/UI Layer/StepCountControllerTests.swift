@@ -29,13 +29,6 @@ class StepCountControllerTests: XCTestCase {
     // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
   }
   
-  func testPerformanceExample() throws {
-    // This is an example of a performance test case.
-    self.measure {
-      // Put the code you want to measure the time of here.
-    }
-  }
-  
   override func setUp() {
     super.setUp()
     sut = StepCountController()
@@ -44,6 +37,10 @@ class StepCountControllerTests: XCTestCase {
   override func tearDown() {
     sut = nil
     super.tearDown()
+  }
+  
+  private func setGoal() {
+    AppModel.instance.dataModel.goal = 1000
   }
   
   // MARK: - Initial State
@@ -55,15 +52,16 @@ class StepCountControllerTests: XCTestCase {
   }
   
   func testController_whenStartTapped_isInProgress() {
+    setGoal()
     sut.startStopPause(nil)
     let state = AppModel.instance.appState
     XCTAssertEqual(state, AppState.inProgress)
   }
   
   func testController_whenStartTapped_buttonTitleIsPause() {
+    setGoal()
     sut.startStopPause(nil)
     let text = sut.startButton.title(for: .normal)
     XCTAssertEqual(text, AppState.inProgress.nextStateButtonLabel)
   }
-  
 }

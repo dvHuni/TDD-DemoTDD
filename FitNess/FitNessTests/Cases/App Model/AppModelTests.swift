@@ -30,13 +30,6 @@ class AppModelTests: XCTestCase {
     // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
   }
   
-  func testPerformanceExample() throws {
-    // This is an example of a performance test case.
-    measure {
-      // Put the code you want to measure the time of here.
-    }
-  }
-  
   override func setUp() {
     super.setUp()
     sut = AppModel()
@@ -45,6 +38,10 @@ class AppModelTests: XCTestCase {
   override func tearDown() {
     sut = nil
     super.tearDown()
+  }
+  
+  private func setGoal() {
+    sut.dataModel.goal = 1000
   }
   
   func test_AppModel_whenInitialized_isNotStartedAppState() {
@@ -56,12 +53,18 @@ class AppModelTests: XCTestCase {
   }
   
   func test_AppModel_whenStartButtonPressed_isInProgressAppState() {
+    // given
+    setGoal()
+    
     // when
-    sut.start()
+    try? sut.start()
     
     // then
     let observedState = sut.appState
     XCTAssertEqual(observedState, AppState.inProgress)
   }
   
+  func test_AppModelWithNoGoal_whenStarted_throwsError() {
+    XCTAssertThrowsError(try sut.start())
+  }
 }
