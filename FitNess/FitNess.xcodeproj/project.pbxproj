@@ -19,6 +19,8 @@
 		779AE31E27EEF438006E5268 /* DataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779AE31D27EEF438006E5268 /* DataModelTests.swift */; };
 		779AE32127EEF5A8006E5268 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779AE32027EEF5A8006E5268 /* DataModel.swift */; };
 		77F8807A2813AC050028F983 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F880792813AC050028F983 /* AppError.swift */; };
+		77F8807D2814EA970028F983 /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F8807C2814EA970028F983 /* ViewControllers.swift */; };
+		77F880802814EC630028F983 /* RootViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F8807F2814EC630028F983 /* RootViewController+.swift */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +49,8 @@
 		779AE31D27EEF438006E5268 /* DataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelTests.swift; sourceTree = "<group>"; };
 		779AE32027EEF5A8006E5268 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		77F880792813AC050028F983 /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		77F8807C2814EA970028F983 /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
+		77F8807F2814EC630028F983 /* RootViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootViewController+.swift"; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* FitNess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitNess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2A5F20F1F4A9144005CD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,6 +141,8 @@
 		773E99D927C90F1400131CD8 /* FitNessTests */ = {
 			isa = PBXGroup;
 			children = (
+				77F8807E2814EC550028F983 /* Test Extensions */,
+				77F8807B2814EA770028F983 /* Test Classes */,
 				772A707527CDC43500E55B6B /* Cases */,
 			);
 			path = FitNessTests;
@@ -156,6 +162,22 @@
 				779AE32027EEF5A8006E5268 /* DataModel.swift */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		77F8807B2814EA770028F983 /* Test Classes */ = {
+			isa = PBXGroup;
+			children = (
+				77F8807C2814EA970028F983 /* ViewControllers.swift */,
+			);
+			path = "Test Classes";
+			sourceTree = "<group>";
+		};
+		77F8807E2814EC550028F983 /* Test Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				77F8807F2814EC630028F983 /* RootViewController+.swift */,
+			);
+			path = "Test Extensions";
 			sourceTree = "<group>";
 		};
 		D2A5F1F71F4A9143005CD714 = {
@@ -296,7 +318,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				779AE31E27EEF438006E5268 /* DataModelTests.swift in Sources */,
+				77F880802814EC630028F983 /* RootViewController+.swift in Sources */,
 				773E99DB27C90F1400131CD8 /* AppModelTests.swift in Sources */,
+				77F8807D2814EA970028F983 /* ViewControllers.swift in Sources */,
 				772A707427CDC25400E55B6B /* StepCountControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
