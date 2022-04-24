@@ -36,11 +36,16 @@ class StepCountControllerTests: XCTestCase {
   
   override func tearDown() {
     sut = nil
+    removeGoal()
     super.tearDown()
   }
   
   private func setGoal() {
     AppModel.instance.dataModel.goal = 1000
+  }
+  
+  private func removeGoal() {
+    AppModel.instance.dataModel.goal = nil
   }
   
   // MARK: - Initial State
@@ -63,5 +68,12 @@ class StepCountControllerTests: XCTestCase {
     sut.startStopPause(nil)
     let text = sut.startButton.title(for: .normal)
     XCTAssertEqual(text, AppState.inProgress.nextStateButtonLabel)
+  }
+  
+  func testController_whenGoalUpadted_updateToNewGoal() {
+    let newGoal = 50
+    sut.updateGoal(newGoal: newGoal)
+    let updatedGoal = AppModel.instance.dataModel.goal
+    XCTAssertEqual(newGoal, updatedGoal)
   }
 }
